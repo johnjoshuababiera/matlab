@@ -34,12 +34,14 @@ public class UserLogsPresenter extends ActivityLogger{
         TableColumn<UserLog, String> column = new TableColumn<>("Activity");
         column.setPrefWidth(650);
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getActivity()));
+        column.setSortable(false);
         return column;
     }
 
     private TableColumn<UserLog, String> getTimeStampColumn(){
         TableColumn<UserLog, String> column = new TableColumn<>("Time Stamp");
         column.setPrefWidth(250);
+        column.setSortable(false);
         column.setCellValueFactory(param -> new SimpleStringProperty(simpleDateFormat.format(param.getValue().getTimestamp())));
         return column;
     }
