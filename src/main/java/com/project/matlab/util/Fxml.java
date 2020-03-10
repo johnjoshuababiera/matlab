@@ -6,4 +6,5 @@ public class Fxml {
     public static final String UPLOAD_WORK_SPACE= "/fxml/upload_workspace.fxml";
     public static final String USER_LOGS= "/fxml/user_logs.fxml";
     public static final String ACCOUNT_MANAGEMENT= "/fxml/account_management.fxml";
+    public static final String LOG_IN= "/fxml/login.fxml";
 }
