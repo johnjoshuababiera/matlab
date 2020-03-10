@@ -17,7 +17,7 @@
                 <TableView fx:id="tblUsers" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
             </center>
             <top>
-                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="960.0" text="Manage User" BorderPane.alignment="CENTER_LEFT">
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="960.0" text="Account Management" BorderPane.alignment="CENTER_LEFT">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
