@@ -1,119 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matlab.presenter.UploadWorkspacePresenter">
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.matlab.presenter.UploadWorkspacePresenter">
     <padding>
-        <Insets bottom="20.0" left="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" top="20.0"/>
     </padding>
     <children>
-        <GridPane prefHeight="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <GridPane prefHeight="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                  AnchorPane.topAnchor="0.0">
             <columnConstraints>
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0"
+                                   prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" percentHeight="22.5" prefHeight="30.0" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
                 <Label text="AlexNet Workspace:" GridPane.rowIndex="1">
                     <GridPane.margin>
-                        <Insets right="20.0" />
+                        <Insets right="20.0"/>
                     </GridPane.margin>
                 </Label>
-                <JFXTextField fx:id="txtAlexNet" editable="false" focusColor="BLACK" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <JFXTextField fx:id="txtAlexNet" editable="false" focusColor="BLACK" prefWidth="300.0"
+                              GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXTextField>
-                <JFXButton fx:id="btnAlexChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <JFXButton fx:id="btnAlexChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnAlexUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <JFXButton fx:id="btnAlexUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="52.0" prefWidth="243.0" text="Upload Workspace" GridPane.valignment="CENTER">
+                <Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="52.0" prefWidth="243.0"
+                       text="Upload Workspace" GridPane.valignment="CENTER">
                     <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="14.0"/>
                     </font>
                 </Label>
                 <Label text="GoogleNet Workspace:" GridPane.rowIndex="2">
                     <GridPane.margin>
-                        <Insets right="20.0" />
+                        <Insets right="20.0"/>
                     </GridPane.margin>
                 </Label>
                 <Label text="ResNet-50 Workspace:" GridPane.rowIndex="3">
                     <GridPane.margin>
-                        <Insets right="20.0" />
+                        <Insets right="20.0"/>
                     </GridPane.margin>
                 </Label>
                 <Label text="Fruit114Net Workspace:" GridPane.rowIndex="4">
                     <GridPane.margin>
-                        <Insets right="20.0" />
+                        <Insets right="20.0"/>
                     </GridPane.margin>
                 </Label>
-                <JFXTextField fx:id="txtGoogleNet" editable="false" focusColor="BLACK" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <JFXTextField fx:id="txtGoogleNet" editable="false" focusColor="BLACK" prefWidth="300.0"
+                              GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXTextField>
-                <JFXTextField fx:id="txtRestNet" editable="false" focusColor="BLACK" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <JFXTextField fx:id="txtRestNet" editable="false" focusColor="BLACK" prefWidth="300.0"
+                              GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXTextField>
-                <JFXTextField fx:id="txtFruitNet" editable="false" focusColor="BLACK" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <JFXTextField fx:id="txtFruitNet" editable="false" focusColor="BLACK" prefWidth="300.0"
+                              GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXTextField>
-                <JFXButton fx:id="btnGoogleChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <JFXButton fx:id="btnGoogleChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnGoogleUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <JFXButton fx:id="btnGoogleUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           GridPane.columnIndex="3" GridPane.rowIndex="2">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnResnetChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                <JFXButton fx:id="btnResnetChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           GridPane.columnIndex="2" GridPane.rowIndex="3">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnResnetUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                <JFXButton fx:id="btnResnetUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           GridPane.columnIndex="3" GridPane.rowIndex="3">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnFruitChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                <JFXButton fx:id="btnFruitChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           GridPane.columnIndex="2" GridPane.rowIndex="4">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
-                <JFXButton fx:id="btnFruitUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0" ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                <JFXButton fx:id="btnFruitUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
+                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           GridPane.columnIndex="3" GridPane.rowIndex="4">
                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
             </children>

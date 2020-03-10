@@ -1,4 +1,4 @@
-package com.example.matlab.user;
+package com.project.matlab.user;
 
 import java.util.List;
 

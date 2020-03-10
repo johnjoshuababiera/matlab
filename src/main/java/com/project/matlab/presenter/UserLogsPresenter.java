@@ -1,7 +1,7 @@
-package com.example.matlab.presenter;
+package com.project.matlab.presenter;
 
-import com.example.matlab.ActivityLogger;
-import com.example.matlab.userlogs.UserLog;
+import com.project.matlab.ActivityLogger;
+import com.project.matlab.userlogs.UserLog;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

@@ -1,8 +1,8 @@
-package com.example.matlab;
+package com.project.matlab;
 
-import com.example.matlab.userlogs.UserLog;
-import com.example.matlab.userlogs.UserLogDao;
-import com.example.matlab.userlogs.UserLogDaoImpl;
+import com.project.matlab.userlogs.UserLog;
+import com.project.matlab.userlogs.UserLogDao;
+import com.project.matlab.userlogs.UserLogDaoImpl;
 import javafx.fxml.Initializable;
 
 import java.util.ArrayList;

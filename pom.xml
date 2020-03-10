@@ -42,7 +42,7 @@
                 <version>8.8.3</version>
                 <configuration>
                     <vendor>JJ</vendor>
-                    <mainClass>com.example.matlab.MatlabApp</mainClass>
+                    <mainClass>com.project.matlab.MatlabApp</mainClass>
                     <jfxMainAppJarName>Matlab.jar</jfxMainAppJarName>
                 </configuration>
             </plugin>

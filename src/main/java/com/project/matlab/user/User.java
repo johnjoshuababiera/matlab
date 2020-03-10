@@ -1,7 +1,6 @@
-package com.example.matlab.user;
+package com.project.matlab.user;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 public class User {
@@ -22,9 +21,6 @@ public class User {
     private String middleName;
 
     private String lastName;
-
-    @Temporal(TemporalType.DATE)
-    private Date birthDate;
 
     public String getFirstName() {
         return firstName;
@@ -48,14 +44,6 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
     }
 
     public Long getId() {

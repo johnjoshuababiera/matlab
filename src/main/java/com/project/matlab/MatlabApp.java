@@ -1,19 +1,13 @@
-package com.example.matlab;
+package com.project.matlab;
 
-import com.example.matlab.user.User;
-import com.example.matlab.user.UserDao;
-import com.example.matlab.user.UserDaoImpl;
-import com.example.matlab.util.Fxml;
+import com.project.matlab.util.Fxml;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import sun.plugin.javascript.navig.Anchor;
 
 public class MatlabApp extends Application {
 

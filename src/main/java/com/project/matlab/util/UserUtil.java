@@ -1,6 +1,6 @@
-package com.example.matlab.util;
+package com.project.matlab.util;
 
-import com.example.matlab.user.User;
+import com.project.matlab.user.User;
 
 public class UserUtil {
 

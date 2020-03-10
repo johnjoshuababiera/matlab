@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.matlab.presenter.AccountManagementPresenter">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="tblUsers" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
+            <top>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="960.0" text="Manage User" BorderPane.alignment="CENTER_LEFT">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                    </BorderPane.margin>
+                </Label>
+            </top>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                  <JFXButton fx:id="btnCreate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Create" />
+                  <JFXButton fx:id="btnUpdate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Update" />
+                  <JFXButton fx:id="btnDelete" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Delete" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

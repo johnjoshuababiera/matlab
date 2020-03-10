@@ -1,8 +1,8 @@
-package com.example.matlab.presenter;
+package com.project.matlab.presenter;
 
-import com.example.matlab.ActivityLogger;
-import com.example.matlab.util.Fxml;
 import com.jfoenix.controls.JFXButton;
+import com.project.matlab.ActivityLogger;
+import com.project.matlab.util.Fxml;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

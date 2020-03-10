@@ -1,4 +1,4 @@
-package com.example.matlab.user;
+package com.project.matlab.user;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
@@ -11,6 +11,9 @@ public class UserDaoTest {
 
         User user = new User();
         user.setUsername("username");
+        user.setFirstName("firstname");
+        user.setLastName("lastname");
+        user.setMiddleName("middlename");
         user.setPassword(BCrypt.withDefaults().hashToString(12, "password".toCharArray()));
 
         user = userDao.save(user);

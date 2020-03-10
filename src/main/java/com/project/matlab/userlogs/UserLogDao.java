@@ -1,6 +1,4 @@
-package com.example.matlab.userlogs;
-
-import com.example.matlab.user.User;
+package com.project.matlab.userlogs;
 
 import java.util.List;
 

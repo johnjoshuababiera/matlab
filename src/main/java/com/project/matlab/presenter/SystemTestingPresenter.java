@@ -1,8 +1,8 @@
-package com.example.matlab.presenter;
+package com.project.matlab.presenter;
 
-import com.example.matlab.ActivityLogger;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import com.project.matlab.ActivityLogger;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -53,7 +53,18 @@ public class SystemTestingPresenter extends ActivityLogger {
             txtResNetAccuracy.setText("50%");
             txtFruit114Accuracy.setText("50%");
         });
-        btnClear.setOnAction(event -> System.out.println("clear"));
+        btnClear.setOnAction(event -> {
+            imgView.setImage(null);
+            txtFile.setText(null);
+            txtAlexPredicted.setText(null);
+            txtGooglePredicted.setText(null);
+            txtResNetPredicted.setText(null);
+            txtFruit114Predicted.setText(null);
+            txtAlexAccuracy.setText(null);
+            txtGoogleAccuracy.setText(null);
+            txtResNetAccuracy.setText(null);
+            txtFruit114Accuracy.setText(null);
+        });
 
     }
 }

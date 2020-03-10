@@ -1,178 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matlab.presenter.SystemTestingPresenter">
-   <children>
-      <GridPane alignment="CENTER" layoutY="92.0" prefWidth="1132.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <columnConstraints>
-          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="65.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints percentHeight="55.0" vgrow="SOMETIMES" />
-          <RowConstraints percentHeight="35.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <children>
-                  <JFXTextField fx:id="txtFile" editable="false" focusColor="BLACK" maxWidth="400.0" minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="400.0">
-                     <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </HBox.margin>
-                  </JFXTextField>
-                  <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Choose File">
-                     <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </HBox.margin>
-                  </JFXButton>
-               </children>
-            </HBox>
-            <GridPane GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <JFXTextField fx:id="txtAlexPredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtAlexAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtGooglePredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtGoogleAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtResNetPredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtResNetAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtFruit114Predicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <JFXTextField fx:id="txtFruit114Accuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </JFXTextField>
-                  <Label text="AlexNet" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="Predicted Fruit" GridPane.columnIndex="1">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="Accuracy Percentage" GridPane.columnIndex="2">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="GoogleNet" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="ResNet-50" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label text="Fruit114Net" GridPane.rowIndex="4">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </GridPane>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
-               <children>
-                  <Label text="Facts about the Fruit">
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextArea fx:id="txtAreaFacts" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" top="10.0" />
-               </padding>
-            </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowSpan="3">
-               <children>
-                  <ImageView fx:id="imgView" fitHeight="333.0" fitWidth="328.0" pickOnBounds="true" VBox.vgrow="NEVER">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
-                     <children>
-                        <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Classify" textAlignment="CENTER">
-                           <HBox.margin>
-                              <Insets left="5.0" right="5.0" />
-                           </HBox.margin>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.matlab.presenter.SystemTestingPresenter">
+    <children>
+        <GridPane alignment="CENTER" layoutY="92.0" prefWidth="1132.0" AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="65.0"
+                                   prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints percentHeight="55.0" vgrow="SOMETIMES"/>
+                <RowConstraints percentHeight="35.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <children>
+                        <JFXTextField fx:id="txtFile" editable="false" focusColor="BLACK" maxWidth="400.0"
+                                      minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="400.0">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0"
+                                   prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;"
+                                   text="Choose File">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </HBox.margin>
                         </JFXButton>
-                        <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Clear" textAlignment="CENTER">
-                           <HBox.margin>
-                              <Insets left="5.0" right="5.0" />
-                           </HBox.margin>
-                        </JFXButton>
-                     </children>
-                  </HBox>
-               </children>
-               <padding>
-                  <Insets bottom="30.0" left="15.0" right="15.0" top="60.0" />
-               </padding>
-            </VBox>
-         </children>
-      </GridPane>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" top="20.0" />
-   </padding>
+                    </children>
+                </HBox>
+                <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0"
+                                           prefWidth="100.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0"
+                                           prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <JFXTextField fx:id="txtAlexPredicted" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAlexAccuracy" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtGooglePredicted" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtGoogleAccuracy" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtResNetPredicted" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtResNetAccuracy" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFruit114Predicted" alignment="CENTER" editable="false"
+                                      focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtFruit114Accuracy" alignment="CENTER" editable="false" focusColor="BLACK"
+                                      GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </GridPane.margin>
+                        </JFXTextField>
+                        <Label text="AlexNet" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Predicted Fruit" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Accuracy Percentage" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label text="GoogleNet" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label text="ResNet-50" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Fruit114Net" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                    <children>
+                        <Label text="Facts about the Fruit">
+                            <VBox.margin>
+                                <Insets bottom="5.0"/>
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <TextArea fx:id="txtAreaFacts" prefHeight="200.0" prefWidth="200.0"/>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </padding>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
+                      GridPane.rowSpan="3">
+                    <children>
+                        <ImageView fx:id="imgView" fitHeight="333.0" fitWidth="328.0" pickOnBounds="true"
+                                   VBox.vgrow="NEVER">
+                            <VBox.margin>
+                                <Insets bottom="20.0"/>
+                            </VBox.margin>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+                            <children>
+                                <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED"
+                                           contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0"
+                                           ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Classify"
+                                           textAlignment="CENTER">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED"
+                                           contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0"
+                                           ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Clear"
+                                           textAlignment="CENTER">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="30.0" left="15.0" right="15.0" top="60.0"/>
+                    </padding>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" top="20.0"/>
+    </padding>
 </AnchorPane>
