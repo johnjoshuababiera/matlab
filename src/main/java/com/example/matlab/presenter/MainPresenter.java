@@ -1,11 +1,11 @@
 package com.example.matlab.presenter;
 
+import com.example.matlab.ActivityLogger;
 import com.example.matlab.util.Fxml;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainPresenter implements Initializable {
+public class MainPresenter extends ActivityLogger {
 
     @FXML private BorderPane borderPane;
     @FXML private JFXButton btnAccountMgmnt;

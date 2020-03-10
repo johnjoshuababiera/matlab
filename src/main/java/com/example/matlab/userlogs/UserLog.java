@@ -5,6 +5,16 @@ import java.util.Date;
 
 @Entity
 public class UserLog {
+
+    public UserLog() {
+    }
+
+    public UserLog(String activity, Date timeStamp, Long userId){
+        this.activity=activity;
+        this.timestamp=timeStamp;
+        this.userId=userId;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

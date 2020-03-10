@@ -1,15 +1,15 @@
 package com.example.matlab.presenter;
 
+import com.example.matlab.ActivityLogger;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UploadWorkspacePresenter implements Initializable {
+public class UploadWorkspacePresenter extends ActivityLogger {
 
 
     @FXML private JFXTextField txtAlexNet;

@@ -1,9 +1,9 @@
 package com.example.matlab.presenter;
 
+import com.example.matlab.ActivityLogger;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,7 +13,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SystemTestingPresenter implements Initializable {
+public class SystemTestingPresenter extends ActivityLogger {
 
     @FXML private TextArea txtAreaFacts;
     @FXML private ImageView imgView;
