@@ -26,7 +26,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </HBox.margin>
                         </JFXTextField>
-                        <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Choose File">
+                        <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File">
                             <HBox.margin>
                                 <Insets left="5.0" right="5.0" />
                             </HBox.margin>
@@ -144,12 +144,12 @@
                         </ImageView>
                         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
                             <children>
-                                <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Classify" textAlignment="CENTER">
+                                <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Classify" textAlignment="CENTER">
                                     <HBox.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </HBox.margin>
                                 </JFXButton>
-                                <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Clear" textAlignment="CENTER">
+                                <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Clear" textAlignment="CENTER">
                                     <HBox.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </HBox.margin>

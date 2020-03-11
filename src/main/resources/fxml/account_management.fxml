@@ -29,9 +29,9 @@
          <bottom>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <buttons>
-                  <JFXButton fx:id="btnCreate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Create" />
-                  <JFXButton fx:id="btnUpdate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Update" />
-                  <JFXButton fx:id="btnDelete" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Delete" />
+                  <JFXButton fx:id="btnCreate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Create" />
+                  <JFXButton fx:id="btnUpdate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Update" />
+                  <JFXButton fx:id="btnDelete" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Delete" />
               </buttons>
                <BorderPane.margin>
                   <Insets top="10.0" />

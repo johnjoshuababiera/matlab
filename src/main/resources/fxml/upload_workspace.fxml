@@ -41,14 +41,14 @@
                     </GridPane.margin>
                 </JFXTextField>
                 <JFXButton fx:id="btnAlexChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File"
                            GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnAlexUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Upload"
                            GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
@@ -94,42 +94,42 @@
                     </GridPane.margin>
                 </JFXTextField>
                 <JFXButton fx:id="btnGoogleChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File"
                            GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnGoogleUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Upload"
                            GridPane.columnIndex="3" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnResnetChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File"
                            GridPane.columnIndex="2" GridPane.rowIndex="3">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnResnetUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Upload"
                            GridPane.columnIndex="3" GridPane.rowIndex="3">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnFruitChoose" buttonType="RAISED" prefHeight="40.0" prefWidth="200.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Choose File"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File"
                            GridPane.columnIndex="2" GridPane.rowIndex="4">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>
                     </GridPane.margin>
                 </JFXButton>
                 <JFXButton fx:id="btnFruitUpload" buttonType="RAISED" prefHeight="40.0" prefWidth="150.0"
-                           ripplerFill="#a4a4a4" style="-fx-background-color: #cccccc;" text="Upload"
+                           ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Upload"
                            GridPane.columnIndex="3" GridPane.rowIndex="4">
                     <GridPane.margin>
                         <Insets left="5.0" right="5.0"/>

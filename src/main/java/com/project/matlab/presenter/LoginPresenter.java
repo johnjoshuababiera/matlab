@@ -14,6 +14,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -66,6 +68,15 @@ public class LoginPresenter implements Initializable {
 
         });
     }
+
+
+    @FXML
+    void onEnter(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER){
+            btnLogin.fire();
+        }
+    }
+
 
 
 }

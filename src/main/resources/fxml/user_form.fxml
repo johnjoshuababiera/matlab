@@ -36,7 +36,7 @@
                     </padding>
                     <buttons>
                         <JFXButton fx:id="btnSave" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" ripplerFill="#4a4a4a" style="-fx-background-color: #0f4c75;" text="Save" textFill="WHITE" />
-                        <JFXButton fx:id="btnCancel" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Cancel" />
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Cancel" />
                     </buttons>
                 </ButtonBar>
             </bottom>
