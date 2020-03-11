@@ -8,6 +8,10 @@ public class UserUtil {
     public static User getUser() {
         return user;
     }
+
+    public static boolean isAdmin(){
+        return user.isAdmin();
+    }
     public static void setUser(User user) {
         UserUtil.user = user;
     }

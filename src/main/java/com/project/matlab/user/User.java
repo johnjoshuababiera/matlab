@@ -22,6 +22,16 @@ public class User {
 
     private String lastName;
 
+    private boolean admin;
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
+
     public String getFirstName() {
         return firstName;
     }

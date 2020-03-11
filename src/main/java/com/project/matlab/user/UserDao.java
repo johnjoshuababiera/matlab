@@ -7,4 +7,6 @@ public interface UserDao {
     User findById(long id);
     User findByUsername(String username);
     List<User> findAll();
+    void delete(User user);
+    void initializeAdmin();
 }

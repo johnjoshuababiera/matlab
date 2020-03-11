@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="506.0" prefWidth="677.0" style="-fx-background-color: #0f4c75;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.matlab.presenter.UserFormPresenter">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <BorderPane layoutX="20.0" layoutY="20.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXTextField fx:id="txtFirstName" focusColor="#3282b8" labelFloat="true" prefHeight="50.0" prefWidth="200.0" promptText="First Name" />
+                        <JFXTextField fx:id="txtLastName" focusColor="#0c7b93" labelFloat="true" prefHeight="50.0" prefWidth="200.0" promptText="Last Name" />
+                        <JFXTextField fx:id="txtMiddleName" focusColor="#3282b8" labelFloat="true" prefHeight="50.0" prefWidth="200.0" promptText="Middle Name" />
+                        <JFXTextField fx:id="txtUsername" focusColor="#0c7b93" labelFloat="true" prefHeight="50.0" prefWidth="200.0" promptText="Username" />
+                        <JFXPasswordField fx:id="txtPassword" focusColor="#3282b8" prefHeight="50.0" promptText="Password" />
+                    </children>
+                    <padding>
+                        <Insets left="70.0" right="70.0" top="30.0" />
+                    </padding>
+                </VBox>
+            </center>
+            <bottom>
+                <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                    <buttons>
+                        <JFXButton fx:id="btnSave" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" ripplerFill="#4a4a4a" style="-fx-background-color: #0f4c75;" text="Save" textFill="WHITE" />
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" ripplerFill="#4a4a4a" style="-fx-background-color: #cccccc;" text="Cancel" />
+                    </buttons>
+                </ButtonBar>
+            </bottom>
+            <top>
+                <Label text="User Form" textFill="#0f4c75" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+            </top>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+        </BorderPane>
+    </children>
+</AnchorPane>

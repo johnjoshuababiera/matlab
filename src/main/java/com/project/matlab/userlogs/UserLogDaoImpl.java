@@ -32,6 +32,7 @@ public class UserLogDaoImpl implements UserLogDao {
     }
 
 
+
     @Override
     public List<UserLog> findByUserId(long userId) {
         Query query = entityManager.createQuery(FIND_BY_USER_ID, UserLog[].class);

@@ -9,6 +9,7 @@ import com.project.matlab.user.UserDao;
 import com.project.matlab.user.UserDaoImpl;
 import com.project.matlab.util.Fxml;
 import com.project.matlab.util.PresenterUtils;
+import com.project.matlab.util.UserUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -51,6 +52,7 @@ public class LoginPresenter implements Initializable {
                 return;
             }
             try{
+                UserUtil.setUser(user);
                 Stage stage = new Stage();
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource(Fxml.MAIN));

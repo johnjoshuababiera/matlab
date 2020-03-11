@@ -1,5 +1,7 @@
 package com.project.matlab.user;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -40,6 +42,24 @@ public class UserDaoImpl implements UserDao {
         return users;
     }
 
+    @Override
+    public void delete(User user){
+        entityManager.getTransaction().begin();
+        entityManager.remove(user);
+        entityManager.getTransaction().commit();
+    }
+
+    @Override
+    public void initializeAdmin() {
+        if(findAll().isEmpty()){
+            User user = new User();
+            user.setUsername("admin");
+            user.setAdmin(true);
+            user.setPassword(BCrypt.withDefaults().hashToString(12, "admin@12".toCharArray()));
+            save(user);
+        }
+    }
+
 
     @Override
     public User findById(long id) {
@@ -50,7 +70,11 @@ public class UserDaoImpl implements UserDao {
     public User findByUsername(String username) {
         Query query = entityManager.createQuery(FIND_BY_USERNAME, User.class);
         query.setParameter("username", username);
-        return (User) query.getSingleResult();
+        Object object = query.getSingleResult();
+        if(object instanceof User){
+           return (User) object;
+        }
+        return null;
     }
 
 
