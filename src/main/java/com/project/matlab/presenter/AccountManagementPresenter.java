@@ -6,6 +6,7 @@ import com.project.matlab.user.User;
 import com.project.matlab.user.UserDao;
 import com.project.matlab.user.UserDaoImpl;
 import com.project.matlab.util.Fxml;
+import com.project.matlab.util.PresenterUtils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,10 +55,11 @@ public class AccountManagementPresenter extends ActivityLogger {
         });
         btnDelete.setOnAction(event -> {
             User user = (User) tblUsers.getSelectionModel().getSelectedItem();
+            String username= user.getUsername();
             userDao.delete(user);
+            createLog(String.format("Deleted %s user acount.", username));
+            PresenterUtils.INSTANCE.displayInformation(String.format("Successfully deleted %s", username));
             initTableContents();
-
-
         });
     }
 

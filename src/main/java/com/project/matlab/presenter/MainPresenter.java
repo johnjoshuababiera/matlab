@@ -35,11 +35,9 @@ public class MainPresenter extends ActivityLogger {
     public void initialize(URL location, ResourceBundle resources) {
         btnUpdateProfile.setVisible(!UserUtil.isAdmin());
         btnUploadWorkspace.setVisible(UserUtil.isAdmin());
-        btnUserLogs.setVisible(UserUtil.isAdmin());
         btnAccountMgmnt.setVisible(UserUtil.isAdmin());
         btnUpdateProfile.setManaged(!UserUtil.isAdmin());
         btnUploadWorkspace.setManaged(UserUtil.isAdmin());
-        btnUserLogs.setManaged(UserUtil.isAdmin());
         btnAccountMgmnt.setManaged(UserUtil.isAdmin());
 
         btnUpdateProfile.setOnAction(event -> showUserForm(UserUtil.getUser(), event));

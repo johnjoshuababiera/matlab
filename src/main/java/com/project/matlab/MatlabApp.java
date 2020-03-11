@@ -19,6 +19,7 @@ public class MatlabApp extends Application {
         loader.setLocation(getClass().getResource(Fxml.LOG_IN));
         AnchorPane anchorPane = loader.load();
         anchorPane.requestFocus();
+        primaryStage.setTitle("Automated Fruit Classification using Deep Convolutional Neural Network");
         primaryStage.setScene(new Scene(anchorPane));
         primaryStage.show();
     }

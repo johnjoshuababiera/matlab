@@ -6,15 +6,6 @@ import java.util.Date;
 @Entity
 public class UserLog {
 
-    public UserLog() {
-    }
-
-    public UserLog(String activity, Date timeStamp, Long userId){
-        this.activity=activity;
-        this.timestamp=timeStamp;
-        this.userId=userId;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,10 +14,30 @@ public class UserLog {
 
     private String activity;
 
+    private String username;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
 
     private Long userId;
+
+    public UserLog() {
+    }
+
+    public UserLog(String activity, Date timeStamp, Long userId, String username) {
+        this.activity = activity;
+        this.timestamp = timeStamp;
+        this.userId = userId;
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public Long getUserId() {
         return userId;

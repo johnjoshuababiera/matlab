@@ -44,6 +44,7 @@ public class SystemTestingPresenter extends ActivityLogger {
             }
         });
         btnClassify.setOnAction(event -> {
+            createLog("Classified an image");
             txtAlexPredicted.setText("Apple");
             txtGooglePredicted.setText("Apple");
             txtResNetPredicted.setText("Apple");

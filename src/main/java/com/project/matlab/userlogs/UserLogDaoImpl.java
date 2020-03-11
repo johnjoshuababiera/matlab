@@ -4,11 +4,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserLogDaoImpl implements UserLogDao {
 
 
+    public static final String FIND_ALL = "select ul from UserLog ul";
     public static final String FIND_BY_USER_ID = "select ul from UserLog ul where ul.userId= :userId";
     private static UserLogDaoImpl INSTANCE;
     private static EntityManager entityManager;
@@ -35,8 +37,16 @@ public class UserLogDaoImpl implements UserLogDao {
 
     @Override
     public List<UserLog> findByUserId(long userId) {
-        Query query = entityManager.createQuery(FIND_BY_USER_ID, UserLog[].class);
+        Query query = entityManager.createQuery(FIND_BY_USER_ID);
         query.setParameter("userId", userId);
-        return query.getResultList();
+        return new ArrayList<>(query.getResultList());
+    }
+
+
+    @Override
+    public List<UserLog> findAll() {
+        Query query = entityManager.createQuery(FIND_ALL);
+        List<UserLog> userLogs = new ArrayList(query.getResultList());
+        return userLogs;
     }
 }

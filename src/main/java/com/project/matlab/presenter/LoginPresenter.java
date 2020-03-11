@@ -59,6 +59,7 @@ public class LoginPresenter implements Initializable {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource(Fxml.MAIN));
                 AnchorPane anchorPane = loader.load();
+                stage.setTitle("Automated Fruit Classification using Deep Convolutional Neural Network");
                 stage.setScene(new Scene(anchorPane));
                 stage.setOnShown(event1 -> txtPassword.getScene().getWindow().hide());
                 stage.show();
