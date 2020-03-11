@@ -3,7 +3,9 @@ package com.project.matlab.presenter;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.project.matlab.ActivityLogger;
+import com.project.matlab.user.User;
 import com.project.matlab.util.PresenterUtils;
+import com.project.matlab.util.UserUtil;
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 import org.apache.commons.io.FileUtils;
@@ -87,7 +89,8 @@ public class UploadWorkspacePresenter extends ActivityLogger {
                 PresenterUtils.INSTANCE.displayError("Please select file before uploading.");
                 return;
             }
-            File newFile = new File(String.format("files/%s", "",file.getName()));
+            User user = UserUtil.getUser();
+            File newFile = new File(String.format("%s/%s", user.getUsername(),file.getName()));
             if(newFile.exists()){
                 newFile.delete();
             }
