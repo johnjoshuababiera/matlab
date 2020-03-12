@@ -1,10 +1,10 @@
-package com.project.matlab;
+package com.project.fruit114net;
 
-import com.project.matlab.user.User;
-import com.project.matlab.userlogs.UserLog;
-import com.project.matlab.userlogs.UserLogDao;
-import com.project.matlab.userlogs.UserLogDaoImpl;
-import com.project.matlab.util.UserUtil;
+import com.project.fruit114net.user.User;
+import com.project.fruit114net.userlogs.UserLog;
+import com.project.fruit114net.userlogs.UserLogDao;
+import com.project.fruit114net.userlogs.UserLogDaoImpl;
+import com.project.fruit114net.util.UserUtil;
 import javafx.fxml.Initializable;
 
 import java.util.Date;

@@ -1,8 +1,8 @@
-package com.project.matlab.presenter;
+package com.project.fruit114net.presenter;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import com.project.matlab.ActivityLogger;
+import com.project.fruit114net.ActivityLogger;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;

@@ -1,4 +1,4 @@
-package com.project.matlab.util;
+package com.project.fruit114net.util;
 
 public class Fxml {
     public static final String MAIN = "/fxml/main.fxml";

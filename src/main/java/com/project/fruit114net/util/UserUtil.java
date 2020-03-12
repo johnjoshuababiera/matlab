@@ -1,6 +1,6 @@
-package com.project.matlab.util;
+package com.project.fruit114net.util;
 
-import com.project.matlab.user.User;
+import com.project.fruit114net.user.User;
 
 public class UserUtil {
 

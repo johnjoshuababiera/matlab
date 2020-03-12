@@ -43,16 +43,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.8.3</version>
-                <configuration>
-                    <vendor>JJ</vendor>
-                    <mainClass>com.project.matlab.MatlabApp</mainClass>
-                    <jfxMainAppJarName>Matlab.jar</jfxMainAppJarName>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
@@ -67,9 +57,18 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.8.3</version>
+                <configuration>
+                    <vendor>JJ</vendor>
+                    <jfxMainAppJarName>Fruit114Net.jar</jfxMainAppJarName>
+                    <mainClass>com.project.fruit114net.Fruit114Net</mainClass>
+                    <appName>Fruit114Net</appName>
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
-
-
 </project>

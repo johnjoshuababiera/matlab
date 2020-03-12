@@ -1,4 +1,4 @@
-package com.project.matlab.user;
+package com.project.fruit114net.user;
 
 import javax.persistence.*;
 

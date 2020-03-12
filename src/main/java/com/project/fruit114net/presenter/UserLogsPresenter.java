@@ -1,8 +1,8 @@
-package com.project.matlab.presenter;
+package com.project.fruit114net.presenter;
 
-import com.project.matlab.ActivityLogger;
-import com.project.matlab.userlogs.UserLog;
-import com.project.matlab.util.UserUtil;
+import com.project.fruit114net.ActivityLogger;
+import com.project.fruit114net.userlogs.UserLog;
+import com.project.fruit114net.util.UserUtil;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

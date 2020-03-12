@@ -1,4 +1,4 @@
-package com.project.matlab.userlogs;
+package com.project.fruit114net.userlogs;
 
 import javax.persistence.*;
 import java.util.Date;

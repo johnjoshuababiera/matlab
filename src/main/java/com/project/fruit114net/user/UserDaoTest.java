@@ -1,4 +1,4 @@
-package com.project.matlab.user;
+package com.project.fruit114net.user;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
