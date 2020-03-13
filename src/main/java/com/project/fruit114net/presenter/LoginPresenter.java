@@ -13,12 +13,15 @@ import com.project.fruit114net.util.UserUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,12 +33,30 @@ public class LoginPresenter implements Initializable {
     private JFXPasswordField txtPassword;
     @FXML
     private JFXButton btnLogin;
+    @FXML
+    private JFXButton btnSignup;
 
     UserDao userDao;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userDao = UserDaoImpl.getInstance();
+        btnSignup.setOnAction(event -> {
+            try {
+                Stage stage = new Stage();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource(Fxml.USER_FORM));
+                AnchorPane anchorPane = loader.load();
+                UserFormPresenter presenter = loader.getController();
+                presenter.setUser(new User());
+                stage.setScene(new Scene(anchorPane));
+                stage.initModality(Modality.WINDOW_MODAL);
+                stage.initOwner(((Node) (event.getSource())).getScene().getWindow());
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
         btnLogin.setOnAction(event -> {
             if (txtUsername.getText() == null || txtUsername.getText().isEmpty() ||
                     txtPassword.getText() == null || txtPassword.getText().isEmpty()) {

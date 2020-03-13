@@ -53,10 +53,12 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
                 user.setPassword(BCrypt.withDefaults().hashToString(12, txtPassword.getText().toCharArray()));
             }
             User savedUser = userDao.save(user);
-            if (savedUser.getId() == UserUtil.getUser().getId()) {
+            if (UserUtil.getUser()!=null && savedUser.getId() == UserUtil.getUser().getId()) {
                 UserUtil.setUser(savedUser);
+                logActivity(oldUserName);
+            } else {
+                createLog(String.format("%s account created", savedUser.getUsername()));
             }
-            logActivity(oldUserName);
             PresenterUtils.INSTANCE.displayInformation("User account created.");
             closeStage(event);
         });

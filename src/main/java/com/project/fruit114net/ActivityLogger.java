@@ -16,7 +16,7 @@ public abstract class ActivityLogger implements Initializable {
 
     public UserLog createLog(String activity) {
         User user = UserUtil.getUser();
-        UserLog userLog = new UserLog(activity, new Date(), user.getId(), user.getUsername());
+        UserLog userLog = new UserLog(activity, new Date(), user == null ? null : user.getId(), user == null ? null : user.getUsername());
         return userLogDao.save(userLog);
     }
 

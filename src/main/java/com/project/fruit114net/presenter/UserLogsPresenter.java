@@ -35,25 +35,28 @@ public class UserLogsPresenter extends ActivityLogger {
 
     private TableColumn<UserLog, String> getActivityColumn() {
         TableColumn<UserLog, String> column = new TableColumn<>("Activity");
-        column.setPrefWidth(650);
+        column.setPrefWidth(575);
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getActivity()));
         column.setSortable(false);
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 
     private TableColumn<UserLog, String> getUsernameColumn() {
         TableColumn<UserLog, String> column = new TableColumn<>("Username");
-        column.setPrefWidth(200);
+        column.setPrefWidth(130);
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getUsername()));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         column.setSortable(false);
         return column;
     }
 
     private TableColumn<UserLog, String> getTimeStampColumn() {
         TableColumn<UserLog, String> column = new TableColumn<>("Time Stamp");
-        column.setPrefWidth(250);
+        column.setPrefWidth(220);
         column.setSortable(false);
         column.setCellValueFactory(param -> new SimpleStringProperty(simpleDateFormat.format(param.getValue().getTimestamp())));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 }

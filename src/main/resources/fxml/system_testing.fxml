@@ -21,12 +21,12 @@
             <children>
                 <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <children>
-                        <JFXTextField fx:id="txtFile" editable="false" focusColor="BLACK" maxWidth="400.0" minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="400.0">
+                        <JFXTextField fx:id="txtFile" editable="false" focusColor="#0f4c75" maxWidth="400.0" minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="400.0">
                             <HBox.margin>
                                 <Insets left="5.0" right="5.0" />
                             </HBox.margin>
                         </JFXTextField>
-                        <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Choose File">
+                        <JFXButton fx:id="btnChooseFile" buttonType="RAISED" minHeight="40.0" prefHeight="40.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Choose File" textFill="WHITE">
                             <HBox.margin>
                                 <Insets left="5.0" right="5.0" />
                             </HBox.margin>
@@ -47,72 +47,72 @@
                         <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <JFXTextField fx:id="txtAlexPredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <JFXTextField fx:id="txtAlexPredicted" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="1" GridPane.rowIndex="1">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtAlexAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <JFXTextField fx:id="txtAlexAccuracy" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtGooglePredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <JFXTextField fx:id="txtGooglePredicted" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtGoogleAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <JFXTextField fx:id="txtGoogleAccuracy" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="2" GridPane.rowIndex="2">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtResNetPredicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <JFXTextField fx:id="txtResNetPredicted" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtResNetAccuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <JFXTextField fx:id="txtResNetAccuracy" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="2" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtFruit114Predicted" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <JFXTextField fx:id="txtFruit114Predicted" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="1" GridPane.rowIndex="4">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtFruit114Accuracy" alignment="CENTER" editable="false" focusColor="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                        <JFXTextField fx:id="txtFruit114Accuracy" alignment="CENTER" editable="false" focusColor="#0f4c75" GridPane.columnIndex="2" GridPane.rowIndex="4">
                             <GridPane.margin>
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <Label text="AlexNet" GridPane.rowIndex="1">
+                        <Label text="AlexNet" textFill="#0f4c75" GridPane.rowIndex="1">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label text="Predicted Fruit" GridPane.columnIndex="1">
+                        <Label text="Predicted Fruit" textFill="#0f4c75" GridPane.columnIndex="1">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label text="Accuracy Percentage" GridPane.columnIndex="2">
+                        <Label text="Accuracy Percentage" textFill="#0f4c75" GridPane.columnIndex="2">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label text="GoogleNet" GridPane.rowIndex="2">
+                        <Label text="GoogleNet" textFill="#0f4c75" GridPane.rowIndex="2">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label text="ResNet-50" GridPane.rowIndex="3">
+                        <Label text="ResNet-50" textFill="#0f4c75" GridPane.rowIndex="3">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label text="Fruit114Net" GridPane.rowIndex="4">
+                        <Label text="Fruit114Net" textFill="#0f4c75" GridPane.rowIndex="4">
                             <font>
                                 <Font size="14.0" />
                             </font>
@@ -121,7 +121,7 @@
                 </GridPane>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                     <children>
-                        <Label text="Facts about the Fruit">
+                        <Label text="Facts about the Fruit" textFill="#0f4c75">
                             <VBox.margin>
                                 <Insets bottom="5.0" />
                             </VBox.margin>
@@ -129,7 +129,7 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextArea fx:id="txtAreaFacts" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                        <TextArea fx:id="txtAreaFacts" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #0f4c75;" wrapText="true" />
                     </children>
                     <padding>
                         <Insets bottom="10.0" top="10.0" />
@@ -144,12 +144,12 @@
                         </ImageView>
                         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
                             <children>
-                                <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Classify" textAlignment="CENTER">
+                                <JFXButton fx:id="btnClassify" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Classify" textAlignment="CENTER" textFill="WHITE">
                                     <HBox.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </HBox.margin>
                                 </JFXButton>
-                                <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" textFill="WHITE" text="Clear" textAlignment="CENTER">
+                                <JFXButton fx:id="btnClear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="40.0" prefWidth="130.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Clear" textAlignment="CENTER" textFill="WHITE">
                                     <HBox.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </HBox.margin>

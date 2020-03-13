@@ -99,12 +99,14 @@ public class AccountManagementPresenter extends ActivityLogger {
     private TableColumn<User, String> getUsernameColumn() {
         TableColumn<User, String> column = new TableColumn<>("Username");
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getUsername()));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 
     private TableColumn<User, String> getLastNameColumn() {
         TableColumn<User, String> column = new TableColumn<>("Last Name");
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getLastName()));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 
@@ -112,6 +114,7 @@ public class AccountManagementPresenter extends ActivityLogger {
     private TableColumn<User, String> getFirstNameColumn() {
         TableColumn<User, String> column = new TableColumn<>("Middle Name");
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getMiddleName()));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 
@@ -119,6 +122,7 @@ public class AccountManagementPresenter extends ActivityLogger {
     private TableColumn<User, String> getMiddleNameColumn() {
         TableColumn<User, String> column = new TableColumn<>("Middle Name");
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getMiddleName()));
+        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }
 }
