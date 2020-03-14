@@ -90,6 +90,10 @@ public class UploadWorkspacePresenter extends ActivityLogger {
                 return;
             }
             User user = UserUtil.getUser();
+            File directoryFile = new File(user.getUsername());
+            if(!directoryFile.exists()){
+                directoryFile.mkdir();
+            }
             File newFile = new File(String.format("%s/%s", user.getUsername(),file.getName()));
             if(newFile.exists()){
                 newFile.delete();
