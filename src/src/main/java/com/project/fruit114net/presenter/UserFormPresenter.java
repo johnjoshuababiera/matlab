@@ -2,7 +2,6 @@ package com.project.fruit114net.presenter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.project.fruit114net.ActivityLogger;
@@ -33,10 +32,6 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
     @FXML
     private JFXPasswordField txtPassword;
     @FXML
-    private JFXPasswordField txtConfirmPassword;
-    @FXML
-    private JFXCheckBox chkBoxAdmin;
-    @FXML
     private JFXButton btnSave;
     @FXML
     private JFXButton btnCancel;
@@ -49,12 +44,8 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
         userDao = UserDaoImpl.getInstance();
         btnSave.setOnAction(event -> {
 
-            if (txtUsername.getText() == null || txtUsername.getText().isEmpty() || txtPassword.getText() == null || txtPassword.getText().isEmpty()) {
+            if(txtUsername.getText() == null ||txtUsername.getText().isEmpty() || txtPassword.getText() == null || txtPassword.getText().isEmpty()){
                 PresenterUtils.INSTANCE.displayError("Username or Password should not be empty.");
-                return;
-            }
-            if(!txtPassword.getText().equals(txtConfirmPassword.getText())){
-                PresenterUtils.INSTANCE.displayError("Password does not match.");
                 return;
             }
 
@@ -63,12 +54,12 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
             user.setMiddleName(txtMiddleName.getText());
             user.setLastName(txtLastName.getText());
             user.setUsername(txtUsername.getText());
-            user.setAdmin(chkBoxAdmin.isSelected());
+            user.setAdmin(onEdit ? user.isAdmin() : false);
             if (txtPassword.getText() != null && !txtPassword.getText().isEmpty()) {
                 user.setPassword(BCrypt.withDefaults().hashToString(12, txtPassword.getText().toCharArray()));
             }
             User duplicate = userDao.findByUsername(user.getUsername());
-            if ((duplicate != null && !onEdit) || (onEdit && user.getId() != duplicate.getId())) {
+            if((duplicate!=null && !onEdit) || (onEdit && user.getId() != duplicate.getId())){
                 PresenterUtils.INSTANCE.displayError("Username already exists.");
                 return;
             }
@@ -86,7 +77,7 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
     }
 
     private void logActivity(String oldUserName) {
-        String activity = onEdit ? "Updated" : "Created";
+        String activity = onEdit ? "Updated": "Created";
         String username = onEdit ? oldUserName : user.getUsername();
         createLog(String.format("%s %s user account.", activity, username));
     }
@@ -100,14 +91,12 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
     public void setUser(User user) {
         this.user = user;
         this.onEdit = user.getId() != null;
-        if (this.onEdit) {
+        if (user.getId() != null) {
             txtUsername.setText(user.getUsername());
             txtFirstName.setText(user.getFirstName());
             txtMiddleName.setText(user.getMiddleName());
             txtLastName.setText(user.getLastName());
             txtPassword.setText("");
-            chkBoxAdmin.setSelected(user.isAdmin());
-            chkBoxAdmin.setVisible(UserUtil.isAdmin());
         }
     }
 

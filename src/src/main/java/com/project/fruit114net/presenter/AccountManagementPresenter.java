@@ -91,10 +91,9 @@ public class AccountManagementPresenter extends ActivityLogger {
         TableColumn<User, String> firstNameColumn = getFirstNameColumn();
         TableColumn<User, String> middleNameColumn = getMiddleNameColumn();
         TableColumn<User, String> lastNameColumn = getLastNameColumn();
-        TableColumn<User, String> adminColumn = getAdminColumn();
 
         tblUsers.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        tblUsers.getColumns().addAll(usernameColumn, firstNameColumn, middleNameColumn, lastNameColumn,adminColumn);
+        tblUsers.getColumns().addAll(usernameColumn, firstNameColumn, middleNameColumn, lastNameColumn);
     }
 
     private void initTableContents() {
@@ -129,13 +128,6 @@ public class AccountManagementPresenter extends ActivityLogger {
     private TableColumn<User, String> getMiddleNameColumn() {
         TableColumn<User, String> column = new TableColumn<>("Middle Name");
         column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getMiddleName()));
-        column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
-        return column;
-    }
-
-    private TableColumn<User, String> getAdminColumn() {
-        TableColumn<User, String> column = new TableColumn<>("Admin");
-        column.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().isAdmin() ? "Yes" : "No"));
         column.setStyle("-fx-background-color: rgba(69,69,69,0.26);");
         return column;
     }

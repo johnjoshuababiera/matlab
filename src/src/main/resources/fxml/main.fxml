@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane minWidth="1200.0" prefHeight="650.0" prefWidth="650.0" stylesheets="@../css/main.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.fruit114net.presenter.MainPresenter">
+    <children>
+        <BorderPane fx:id="borderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox maxWidth="220.0" prefWidth="220.0" style="-fx-border-color: #000000; -fx-background-color: rgba(69,69,69,0.26)"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="btnUpdateProfile" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="Update Profile" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnAccountMgmnt" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="Account Management" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnUploadWorkspace" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="Upload Workspace" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSystemTesting" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="System Testing" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnUserLogs" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="User Logs" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSignOut" alignment="CENTER" buttonType="RAISED" maxHeight="50.0"
+                                   maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0"
+                                   ripplerFill="#a4a4a4" style="-fx-background-color:#0f4c75;" textFill="WHITE"
+                                   text="Sign Out" textAlignment="CENTER">
+                            <effect>
+                                <Blend/>
+                            </effect>
+                            <VBox.margin>
+                                <Insets bottom="6.0" top="6.0"/>
+                            </VBox.margin>
+                        </JFXButton>
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

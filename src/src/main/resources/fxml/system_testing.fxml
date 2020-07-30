@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.Tooltip?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <AnchorPane prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.fruit114net.presenter.SystemTestingPresenter">
     <children>
         <GridPane alignment="CENTER" layoutY="92.0" prefWidth="1132.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -97,16 +87,10 @@
                                 <Insets left="5.0" right="5.0" />
                             </GridPane.margin>
                         </JFXTextField>
-                        <Label contentDisplay="RIGHT" text="AlexNet" textFill="#0f4c75" GridPane.rowIndex="1">
+                        <Label text="AlexNet" textFill="#0f4c75" GridPane.rowIndex="1">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                     <tooltip>
-                        <Tooltip maxWidth="500.0" minWidth="100.0" prefWidth="500.0" text="ALEXNET DESCRIPTION HERE" textAlignment="JUSTIFY" wrapText="true" />
-                     </tooltip>
-                     <graphic>
-                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
-                     </graphic>
                         </Label>
                         <Label text="Predicted Fruit" textFill="#0f4c75" GridPane.columnIndex="1">
                             <font>
@@ -118,38 +102,20 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label contentDisplay="RIGHT" text="GoogleNet" textFill="#0f4c75" GridPane.rowIndex="2">
+                        <Label text="GoogleNet" textFill="#0f4c75" GridPane.rowIndex="2">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                     <graphic>
-                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
-                     </graphic>
-                     <tooltip>
-                        <Tooltip maxWidth="500.0" minWidth="100.0" prefWidth="500.0" text="GOOGLENET DESCRIPTION HERE" textAlignment="JUSTIFY" wrapText="true" />
-                     </tooltip>
                         </Label>
-                        <Label contentDisplay="RIGHT" text="ResNet-50" textFill="#0f4c75" GridPane.rowIndex="3">
+                        <Label text="ResNet-50" textFill="#0f4c75" GridPane.rowIndex="3">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                     <graphic>
-                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
-                     </graphic>
-                     <tooltip>
-                        <Tooltip maxWidth="500.0" minWidth="100.0" prefWidth="500.0" text="RESNET50- DESCRIPTION HERE" textAlignment="JUSTIFY" wrapText="true" />
-                     </tooltip>
                         </Label>
-                        <Label contentDisplay="RIGHT" text="Fruit114Net" textFill="#0f4c75" GridPane.rowIndex="4">
+                        <Label text="Fruit114Net" textFill="#0f4c75" GridPane.rowIndex="4">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                     <graphic>
-                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
-                     </graphic>
-                     <tooltip>
-                        <Tooltip maxWidth="500.0" minWidth="100.0" prefWidth="500.0" text="FRUIT114NET DESCRIPTION HERE" textAlignment="JUSTIFY" wrapText="true" />
-                     </tooltip>
                         </Label>
                     </children>
                 </GridPane>
