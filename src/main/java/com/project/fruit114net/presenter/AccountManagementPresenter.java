@@ -75,7 +75,7 @@ public class AccountManagementPresenter extends ActivityLogger {
 
     private void printTable() {
         try {
-            PrintUtil.printJasperCollection(tblUsers.getItems(), new File(getClass().getResource("/reports/user.jasper").getFile()), null);
+            PrintUtil.printJasperCollection(tblUsers.getItems(), new File("./reports/user.jasper"), null);
         } catch (Exception e) {
             e.printStackTrace();
         }
