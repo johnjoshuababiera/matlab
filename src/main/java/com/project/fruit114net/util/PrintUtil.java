@@ -16,11 +16,11 @@ import java.util.List;
 import java.util.Map;
 
 public class PrintUtil {
-    public static void printJasperCollection(List<?> collection, String fileLocation, Map map) throws Exception {
+    public static void printJasperCollection(List<?> collection, File file, Map map) throws Exception {
         if (collection.isEmpty()) {
             throw new Exception("No data to print.");
         }
-        showReport(getFilledJasperPrint(collection, fileLocation, map));
+        showReport(getFilledJasperPrint(collection, file, map));
     }
 
     public static void showReport(JasperPrint jasperPrint) throws HeadlessException {
@@ -50,8 +50,8 @@ public class PrintUtil {
         }
     }
 
-    private static JasperPrint getFilledJasperPrint(List<?> collection, String fileLocation, Map map) {
-        try (FileInputStream inputStream = new FileInputStream(new File(fileLocation))) {
+    private static JasperPrint getFilledJasperPrint(List<?> collection, File file, Map map) {
+        try (FileInputStream inputStream = new FileInputStream(file)) {
             try {
                 return JasperFillManager.fillReport(inputStream, map, new CollectionJasperBean(collection));
             } catch (JRException e) {

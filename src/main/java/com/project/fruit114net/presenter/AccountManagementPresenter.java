@@ -7,6 +7,7 @@ import com.project.fruit114net.user.UserDao;
 import com.project.fruit114net.user.UserDaoImpl;
 import com.project.fruit114net.util.Fxml;
 import com.project.fruit114net.util.PresenterUtils;
+import com.project.fruit114net.util.PrintUtil;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -37,6 +39,8 @@ public class AccountManagementPresenter extends ActivityLogger {
     private JFXButton btnUpdate;
     @FXML
     private JFXButton btnDelete;
+    @FXML
+    private JFXButton btnPrint;
     private List<User> users = new ArrayList<>();
     private UserDao userDao;
 
@@ -51,6 +55,7 @@ public class AccountManagementPresenter extends ActivityLogger {
 
     private void initButtons() {
         btnCreate.setOnAction(event -> showUserForm(new User(), event));
+        btnPrint.setOnAction(event -> printTable());
         btnUpdate.setOnAction(event -> {
             User user = (User) tblUsers.getSelectionModel().getSelectedItem();
             showUserForm(user, event);
@@ -66,6 +71,14 @@ public class AccountManagementPresenter extends ActivityLogger {
                 initTableContents();
             }
         });
+    }
+
+    private void printTable() {
+        try {
+            PrintUtil.printJasperCollection(tblUsers.getItems(), new File(getClass().getResource("/reports/user.jasper").getFile()), null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void showUserForm(User user, ActionEvent event) {
