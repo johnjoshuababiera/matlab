@@ -47,13 +47,14 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userDao = UserDaoImpl.getInstance();
+        chkBoxAdmin.setVisible(UserUtil.getUser() != null);
         btnSave.setOnAction(event -> {
 
             if (txtUsername.getText() == null || txtUsername.getText().isEmpty() || txtPassword.getText() == null || txtPassword.getText().isEmpty()) {
                 PresenterUtils.INSTANCE.displayError("Username or Password should not be empty.");
                 return;
             }
-            if(!txtPassword.getText().equals(txtConfirmPassword.getText())){
+            if (!txtPassword.getText().equals(txtConfirmPassword.getText())) {
                 PresenterUtils.INSTANCE.displayError("Password does not match.");
                 return;
             }
@@ -79,7 +80,8 @@ public class UserFormPresenter extends ActivityLogger implements Initializable {
             } else {
                 createLog(String.format("%s account created", savedUser.getUsername()));
             }
-            PresenterUtils.INSTANCE.displayInformation("User account created.");
+            String message = onEdit ? "updated" : "created";
+            PresenterUtils.INSTANCE.displayInformation(String.format("User account %s.",message));
             closeStage(event);
         });
         btnCancel.setOnAction(event -> closeStage(event));
