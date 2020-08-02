@@ -55,18 +55,18 @@ Deep Convolutional Neural Network
 				</textElement>
 				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("txtAlexPredicted")]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="11" y="190" width="551" height="92" uuid="92748384-16bb-4842-acef-d75772d2978d"/>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="11" y="160" width="551" height="130" uuid="92748384-16bb-4842-acef-d75772d2978d"/>
 				<box padding="2">
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Top">
-					<font size="9"/>
+					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("facts")]]></textFieldExpression>
 			</textField>
 			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
-				<reportElement x="339" y="5" width="180" height="180" uuid="42413a93-d36d-4521-92ab-d70c4ba58ed4">
+				<reportElement x="390" y="6" width="151" height="145" uuid="42413a93-d36d-4521-92ab-d70c4ba58ed4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -205,12 +205,12 @@ Deep Convolutional Neural Network
 				<text><![CDATA[Fruit114Net]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="169" width="170" height="20" uuid="298d8673-89a8-4eaf-834c-093310989cfd">
+				<reportElement x="11" y="140" width="170" height="20" uuid="298d8673-89a8-4eaf-834c-093310989cfd">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Bottom">
-					<font size="9" isBold="false"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Facts about the fruit]]></text>
 			</staticText>
