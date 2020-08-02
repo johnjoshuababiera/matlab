@@ -22,13 +22,24 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="36">
+		<band height="60">
 			<staticText>
-				<reportElement x="0" y="0" width="572" height="36" uuid="44208c4c-fc85-4207-93d7-66ebf1fa6a21"/>
+				<reportElement x="0" y="40" width="572" height="20" uuid="44208c4c-fc85-4207-93d7-66ebf1fa6a21">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Users]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="40" uuid="45677935-6fe0-4a16-882f-8da072e70042"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Users]]></text>
+				<text><![CDATA[Automated Fruit Classification Using 
+Deep Convolutional Neural Network
+]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -189,14 +200,4 @@
 			</textField>
 		</band>
 	</detail>
-	<pageFooter>
-		<band height="25">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<staticText>
-				<reportElement x="0" y="8" width="572" height="17" uuid="6c1cf323-7712-4a00-a5a5-d2ae934d51c8"/>
-				<textElement verticalAlignment="Bottom"/>
-				<text><![CDATA[Automated Fruit Classification Using Deep Convolutional Neural Network]]></text>
-			</staticText>
-		</band>
-	</pageFooter>
 </jasperReport>

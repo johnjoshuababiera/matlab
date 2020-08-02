@@ -18,14 +18,23 @@
 	<field name="totalPrice" class="java.lang.Double"/>
 	<field name="quantity" class="java.lang.Double"/>
 	<pageHeader>
-		<band height="35">
+		<band height="60">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="0" width="572" height="35" uuid="bee05943-15ea-4a52-91d6-aa75e9b8b07a">
+				<reportElement x="0" y="0" width="572" height="40" uuid="79295aa6-2249-48ba-9a8f-d5d6401900ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Automated Fruit Classification Using 
+Deep Convolutional Neural Network
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="572" height="20" uuid="bee05943-15ea-4a52-91d6-aa75e9b8b07a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="15" isBold="true"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[System Testing]]></text>
 			</staticText>
@@ -207,16 +216,4 @@
 			</staticText>
 		</band>
 	</detail>
-	<pageFooter>
-		<band height="25">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<staticText>
-				<reportElement x="0" y="0" width="572" height="25" uuid="4ac045d7-6f92-49a0-9357-6a6c73f20261">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement verticalAlignment="Bottom"/>
-				<text><![CDATA[Automated Fruit Classification Using Deep Convolutional Neural Network]]></text>
-			</staticText>
-		</band>
-	</pageFooter>
 </jasperReport>
