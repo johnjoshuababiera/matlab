@@ -1,5 +1,6 @@
 package com.project.fruit114net.util;
 
+import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -61,6 +62,16 @@ public class PrintUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static boolean print(File file, Map map) throws JRException {
+        try (FileInputStream inputStream = new FileInputStream(file)) {
+            JasperPrint jasperPrint = JasperFillManager.fillReport(inputStream, map, new JREmptyDataSource());
+            showReport(jasperPrint);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }
 
