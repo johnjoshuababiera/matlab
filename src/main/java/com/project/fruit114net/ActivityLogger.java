@@ -25,7 +25,16 @@ public abstract class ActivityLogger implements Initializable {
         return userLogDao.findByUserId(user.getId());
     }
 
+    public List<UserLog> findByUserFilterByDateRange(Date fromDate, Date toDate) {
+        User user = UserUtil.getUser();
+        return userLogDao.findByUserIdAndFilterByDateRange(user.getId(),fromDate, toDate);
+    }
+
     public List<UserLog> findAll() {
         return userLogDao.findAll();
+    }
+
+    public List<UserLog> filterByDateRange(Date fromDate, Date toDate) {
+        return userLogDao.filterByDateRange(fromDate, toDate);
     }
 }

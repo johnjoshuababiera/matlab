@@ -14,21 +14,57 @@
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<field name="username" class="java.lang.String"/>
-	<field name="firstName" class="java.lang.String"/>
-	<field name="middleName" class="java.lang.String"/>
-	<field name="lastName" class="java.lang.String"/>
-	<field name="admin" class="java.lang.Boolean"/>
+	<field name="activity" class="java.lang.String"/>
+	<field name="timestamp" class="java.util.Date"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="36">
+		<band height="54">
 			<staticText>
 				<reportElement x="0" y="0" width="572" height="36" uuid="44208c4c-fc85-4207-93d7-66ebf1fa6a21"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Users]]></text>
+				<text><![CDATA[Users Logs]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="60" y="37" width="143" height="13" uuid="10153e6f-ede9-47a4-8d0f-d5851e9b071e"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("fromDate")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="300" y="37" width="143" height="13" uuid="b8ab3fdc-1fea-4b54-9301-5e7f551e6697"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("toDate")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="37" width="60" height="13" uuid="8883ecf5-381c-49d5-ae4e-01cd0ff16db0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[From Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="37" width="60" height="13" uuid="0b917d55-0085-46fd-865e-8ac7036a0e5e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[To Date:]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -36,7 +72,23 @@
 		<band height="14" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="116" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="7a65007d-8e13-42a4-a9ee-0ca6a496ed88"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="192" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="7a65007d-8e13-42a4-a9ee-0ca6a496ed88"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="192" y="0" width="190" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="28077c5f-52b5-4cdc-bf70-549b1f3c596e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -50,7 +102,7 @@
 				<text><![CDATA[Username]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="116" y="0" width="114" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="43a38eda-cc5e-46b6-9be1-8be3aac27d0a">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="382" y="0" width="190" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="43a38eda-cc5e-46b6-9be1-8be3aac27d0a">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
@@ -63,63 +115,31 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
-				<text><![CDATA[Middle Name]]></text>
-			</staticText>
-			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="230" y="0" width="114" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="28077c5f-52b5-4cdc-bf70-549b1f3c596e">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[First Name]]></text>
-			</staticText>
-			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="344" y="0" width="114" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="1aa120a6-301f-43c6-bda0-9426335b12ec">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Last Name]]></text>
-			</staticText>
-			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="458" y="0" width="114" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="520c96d9-9397-4006-bc25-9469e7061ba3"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Admin]]></text>
+				<text><![CDATA[Time Stamp]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="13" splitType="Stretch">
+		<band height="18" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="116" height="13" uuid="446ebb02-4e5f-44b7-91c0-94ec6d1913ad"/>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="192" height="18" uuid="446ebb02-4e5f-44b7-91c0-94ec6d1913ad"/>
 				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activity}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="192" y="0" width="190" height="18" uuid="70b1967d-6fa4-449b-9450-1261622eacaa"/>
+				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -132,7 +152,7 @@
 				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="116" y="0" width="114" height="13" uuid="70b1967d-6fa4-449b-9450-1261622eacaa"/>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="382" y="0" width="190" height="18" uuid="c247c0f1-4db4-49d8-ace1-57eb1b2047d1"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -143,49 +163,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="230" y="0" width="114" height="13" uuid="c247c0f1-4db4-49d8-ace1-57eb1b2047d1"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{middleName}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="344" y="0" width="114" height="13" uuid="94f83950-2563-4659-9348-10374758c88c"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="458" y="0" width="114" height="13" uuid="b48ea202-f129-47d4-8ce2-bb7710403854"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{admin} ? "Yes":"No"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MMM dd, yyyy hh:mm aa").format($F{timestamp})]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
@@ -193,7 +171,7 @@
 		<band height="25">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="8" width="572" height="17" uuid="6c1cf323-7712-4a00-a5a5-d2ae934d51c8"/>
+				<reportElement x="0" y="8" width="572" height="17" uuid="867c845b-fa21-4fb0-9b76-f2ddc0a646c0"/>
 				<textElement verticalAlignment="Bottom"/>
 				<text><![CDATA[Automated Fruit Classification Using Deep Convolutional Neural Network]]></text>
 			</staticText>

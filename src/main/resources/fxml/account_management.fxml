@@ -34,7 +34,7 @@
                   <JFXButton fx:id="btnCreate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Create" textFill="WHITE" />
                   <JFXButton fx:id="btnUpdate" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Update" textFill="WHITE" />
                   <JFXButton fx:id="btnDelete" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Delete" textFill="WHITE" />
-                  <JFXButton fx:id="btnPrint" buttonType="RAISED" layoutX="850.0" layoutY="13.0" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Print" textFill="WHITE" />
+                  <JFXButton fx:id="btnPrint" buttonType="RAISED" prefHeight="35.0" prefWidth="120.0" ripplerFill="#4a4a4a" style="-fx-background-color:#0f4c75;" text="Print" textFill="WHITE" />
               </buttons>
                <BorderPane.margin>
                   <Insets top="10.0" />

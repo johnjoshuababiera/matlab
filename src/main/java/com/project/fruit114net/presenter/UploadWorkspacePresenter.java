@@ -92,32 +92,12 @@ public class UploadWorkspacePresenter extends ActivityLogger {
                 return;
             }
             User user = UserUtil.getUser();
-            /*File directoryFile = new File(user.getUsername());
+            File directoryFile = new File("./files/"+user.getUsername());
             if(!directoryFile.exists()){
                 directoryFile.mkdirs();
             }
-            File newFile = new File(String.format("%s/%s", user.getUsername(),file.getName()));
-            //File newFile = new File(String.format("C:\\Program Files\\Fruit114Net\\admin\\",file.getName()));
-            if(newFile.exists()){
-                newFile.delete();
-            }
-            FileUtils.copyFile(file, newFile);*/
-
-            //C:\Users\johnjowil0rquia\AppData\Local\Fruit114Net\app
-            //File directoryFile = new File("C:/Users/"+System.getProperty("user.name")+"/AppData/Local/Fruit114Net\\app\\"+user.getUsername()+"\\");
-            File directoryFile = new File("C:/Users/"+System.getProperty("user.name")+"/AppData/Local/Fruit114Net/app/"+user.getUsername());
-            if(!directoryFile.exists()){
-                directoryFile.mkdirs();
-            }
-            File newFile = new File("C:/Users/"+System.getProperty("user.name")+"/AppData/Local/Fruit114Net/app/"+user.getUsername());
-            //System.out.print(newFile.toString());
-            /*File newFile = new File(directoryFile);
-            if(newFile.exists()){
-                newFile.delete();
-            }*/
-            FileUtils.copyFileToDirectory(file, newFile);
+            FileUtils.copyFileToDirectory(file, directoryFile);
             PresenterUtils.INSTANCE.displayInformation("File uploaded.");
-            //FileUtils.copyFile(file, directoryFile);
 
         } catch (IOException e) {
             e.printStackTrace();
