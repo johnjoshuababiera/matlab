@@ -92,7 +92,7 @@ public class UploadWorkspacePresenter extends ActivityLogger {
                 return;
             }
             User user = UserUtil.getUser();
-            File directoryFile = new File("./files/"+user.getUsername());
+            File directoryFile = new File("C:/Users/"+System.getProperty("user.name")+"/AppData/Local/Fruit114Net/app/"+user.getUsername());
             if(!directoryFile.exists()){
                 directoryFile.mkdirs();
             }

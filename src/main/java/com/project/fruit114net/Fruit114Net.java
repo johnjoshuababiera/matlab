@@ -1,9 +1,7 @@
 package com.project.fruit114net;
 
-import com.mathworks.engine.MatlabEngine;
 import com.project.fruit114net.user.UserDao;
 import com.project.fruit114net.user.UserDaoImpl;
-import com.project.fruit114net.util.EngineUtil;
 import com.project.fruit114net.util.Fxml;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Fruit114Net extends Application {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Application.launch(Fruit114Net.class, args);
     }
 
