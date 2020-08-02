@@ -1,7 +1,9 @@
 package com.project.fruit114net;
 
+import com.mathworks.engine.MatlabEngine;
 import com.project.fruit114net.user.UserDao;
 import com.project.fruit114net.user.UserDaoImpl;
+import com.project.fruit114net.util.EngineUtil;
 import com.project.fruit114net.util.Fxml;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +19,7 @@ public class Fruit114Net extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        MatlabEngine matlabEngine = EngineUtil.getMatlabEngineInstance();
+        MatlabEngine matlabEngine = EngineUtil.getMatlabEngineInstance();
         UserDao userDao = UserDaoImpl.getInstance();
         userDao.initializeAdmin();
         FXMLLoader loader = new FXMLLoader();

@@ -65,7 +65,7 @@ public class SystemTestingPresenter extends ActivityLogger {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        matEng = EngineUtil.getMatlabEngineInstance();
+        matEng = EngineUtil.getMatlabEngineInstance();
         btnChooseFile.setOnAction(event -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Images", "*.jpg", "*.jpeg", "*.png"));
